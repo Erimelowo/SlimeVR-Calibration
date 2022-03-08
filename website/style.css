@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #673499;
+
+}
+#holderMain{
+    border: 2px black solid;
+    margin: 18px 18px 18px 18px;
+    background-color: #f3f3f3;
+}
+.button{
+    text-align: center;
+    font-size: larger;
+    text-decoration: none;
+    background: white;
+    color: rgb(12, 12, 12);
+    padding: 7px 14px;
+    border-radius: 5px;
+    margin: 14px 10px 14px 10px;
+    display:flex;
+    flex-direction: row;
+    width: 300px;
+}
+.button:hover{
+    background: rgb(226, 226, 226);
+}
+.vidHolder{
+    display: flex;
+    justify-content: center;
+    margin: 18px 18px 18px 18px;
+}
+.video{
+    
+    margin: auto;
+    border: black 3px solid;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.7);
+    width: 49.5vw;
+    height: 28vw;
+    background-color: black;
+}
