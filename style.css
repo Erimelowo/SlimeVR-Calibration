@@ -18,7 +18,8 @@ body{
     display: flex;
     top: 0;
     left: 0;
-    z-index: 2;}
+    margin: 8px;
+}
 .button{
     text-align: center;
     font-size: larger;
@@ -36,19 +37,21 @@ body{
     background: rgb(226, 226, 226);
 }
 #title{
-    margin: 40px 30px 10px 30px;
+    margin: 30px;
     text-align: center;
+    text-decoration: underline;     
 }
 #subtitle{
     margin: 40px 30px 10px 40px;
     text-align: center;
 }
 p{
+    font-size: large;
     margin: 15px;
 }
 .category{
     margin-left: 50px;
-    font-size: large;
+    font-size: larger;
 }
 .info{
     margin-left: 55px;
