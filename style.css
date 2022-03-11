@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0%;
 }
-body{
-    font-family: 'Source Sans Pro', sans-serif;
-    background: #673499;
 
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background: #673499;
 }
+
 #holderMain{
     border: 2px black solid;
     margin: 18px 18px 18px 18px;
@@ -19,6 +22,7 @@ body{
     top: 0;
     left: 0;
     margin: 8px;
+    flex-wrap: wrap;
 }
 .button{
     text-align: center;
@@ -36,13 +40,16 @@ body{
 .button:hover{
     background: rgb(226, 226, 226);
 }
+.link{
+    font-size: large;
+}
 #title{
     margin: 30px;
     text-align: center;
     text-decoration: underline;     
 }
 #subtitle{
-    margin: 40px 30px 10px 40px;
+    margin: 40px 30px 25px 40px;
     text-align: center;
 }
 p{
@@ -60,15 +67,21 @@ p{
     background-color: rgb(231, 231, 231);
     padding: 20px;
 }
+#linkList{
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    margin: 30px;
+}
 .vidHolder{
     display: flex;
-    justify-content: center;
     margin: 18px 18px 18px 18px;
 }
 .video{
     margin: auto;
     border: black 3px solid;
-    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.7);
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.65);
     width: 49.5vw;
     height: 28vw;
     background-color: black;
