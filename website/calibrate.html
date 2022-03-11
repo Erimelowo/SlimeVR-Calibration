@@ -4,22 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calibration index</title>
+    <title>Calibration - Cawibrwation</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="holderMain">
         
-        <h1>Calibration</h1>
+        <h1 id="title">Calibration</h1>
 
-        <a href="calibrate.html" class="button">Calibration</a>
-        <a href="mounting.html" class="button">Mounting</a>
-        <a href="visualiser.html" class="button">Body proportions tool</a>
+        <div id="buttonHolder">
+            <a href="home.html" class="button">Home</a>
+            <a href="calibrate.html" class="button">Calibration</a>
+            <a href="mounting.html" class="button">Mounting</a>
+            <a href="visualiser.html" class="button">Body proportions tool</a>
+        </div>
+
+        <h2 id="subtitle">Autobone</h2>
 
         <div class="vidHolder">
             <iframe src="https://www.youtube.com/embed/z_HhxXvwkk8" class="video"></iframe>
         </div>
         
+        <h2 id="subtitle">Manual Calibration</h2>
+
+        <ol class="content">
+            <li class="category">Neck Length (8-14)</li>
+                <p class="info">Move your head up and down as if you’re nodding. All trackers should stay in place as you do so, any movement should be negligible. If they move too much, adjust your neck length.</p>
+
+            <li class="category">Head offset (8-12)</li>
+                <p class="info">Shake your head left to right as if you’re disagreeing. All trackers should stay in place as you do so, any movement should be negligible. If they move too much, adjust the head offset.</p>
+
+            <li class="category">Torso length (50-70)</li>
+                <p class="info">Modify value until your SteamVR waist/hip tracker lines up with your hip bones (you can use your controller to line up your IRL hip and tracker).</p>
+
+            <li class="category">Chest (20-40) and waist (2-6) (when using additional spine trackers)</li>
+                <p class="info">Sit down with your back curved (NOT straight) and modify until tracker is closest to hip.</p>
+
+            <li class="category">Legs (80-100)</li>
+                <p class="info">Modify until trackers line up with your IRL feet vertically.</p>
+
+            <li class="category">Knees (40-55)</li>
+                <p class="info">Bend your knees slightly while keeping your back straight and modify until your feet move the least amount possible OR sit down and modify until your feet touch the floor (not floating above ground).</p>
+
+            <li class="category">Feet (when using feet extensions)</li>
+                <p class="info">Set “foot length” at 0, change “foot offset” until feet trackers are inside your avatar’s ankles or at the same level horizontally and set “foot length” back to 5.</p>
+
+            <li class="category">Hips width (26-32)</li>
+                <p class="info">Default value is good. Can try to tweak to make your leg trackers line up when resetting, but do not increase in the goal of preventing leg crossing.</p>
+
+            <li class="category">Hip offset (0)</li>
+                <p class="info">Keep at 0 unless you have a particular problem with your avatar.</p>
+        </ol>
+
     </div>
 </body>
 </html>
