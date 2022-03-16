@@ -24,7 +24,11 @@
         <h2 id="subtitle">Welcome to the Calibration Fox's website.</h2>
 
         <div class="imageHolder">
-            <img src="ressources/foxruler.png" alt="Fox with a ruler" class="image">
+            <audio id="honkSound" src="ressources/honk.mp3" preload="auto"></audio>
+            <map name="honkMap">
+                <area shape="circle" coords="136,156,11" alt="Honk!" onclick="document.getElementById('honkSound').play();">
+            </map>
+            <img src="ressources/foxruler.png" alt="Fox with a ruler" class="image" usemap="#honkMap">
         </div>
         
         <div id="space"></div>
