@@ -8,43 +8,75 @@
 
 body{
     font-family: 'Ubuntu', sans-serif;
-    background: #673499;
+    background: #672F9B;
 }
-
-#holderMain{
-    border: 2px black solid;
-    margin: 18px 18px 18px 18px;
-    background-color: #f3f3f3;
-}
-#buttonHolder{
-    flex-direction: row;
-    display: flex;
+#sideMenu{
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
-    margin: 8px;
-    flex-wrap: wrap;
+    background-color: rgb(19, 19, 19);
+    overflow-x: hidden;
+    overflow-x: hidden;
+}
+#sideTitle{
+    color: white;
+    font-size: 30px;
+    margin: 25px 25px 20px 25px;
+}
+#separatorLine{
+    margin-left: 5%;
+    width: 90%;
+}
+#buttonHolder{
+    margin: 20px 0px 0px 12px;
 }
 .button{
-    text-align: center;
-    font-size: larger;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 3px;
+    padding: 0 16px;
+    margin: 8px 0px 8px 0px;
+    border-radius: 4px;
+    color: white;
+    background: rgb(94, 25, 190);
+    line-height: 2.6;
+    font-size: 14px;
+    height: 36px;
+    word-spacing: 0px;
+    letter-spacing: .0892857143em;
     text-decoration: none;
-    background: white;
-    color: rgb(12, 12, 12);
-    padding: 7px 14px;
-    border-radius: 5px;
-    margin: 14px 10px 14px 10px;
-    display:flex;
-    flex-direction: row;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    width: 194px;
+    border: none;
+    text-align: center;
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+    transition: box-shadow 200ms cubic-bezier(.4, 0, 0.2, 1);
 }
 .button:hover{
-    background: rgb(226, 226, 226);
+    background: rgb(109, 11, 207);
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+}
+#navToggle{
+    margin-left: 10px;
+    font-size: 32px;
+    cursor:pointer;
+}
+#holderMain{
+    border: 2px black solid;
+    margin: 16px 16px 14px 234px;
+    background-color: #f3f3f3;
 }
 .link{
     font-size: large;
 }
 #title{
-    margin: 30px 30px 40px 30px;
+    font-size: 38px;
+    margin: 38px;
     text-align: center;
     text-decoration: underline;     
 }
@@ -63,14 +95,14 @@ h4{
     margin: 35px;
 }
 .category{
-    margin: 30px 0px 10px 40px;
+    margin: 30px 10px 10px 40px;
     font-size: larger;
 }
 .large{
     font-size: large;
 }
 .info{
-    margin-left: 65px;
+    margin: 0px 10px 0px 65px;
 }
 .content{
     background-color: rgb(231, 231, 231);
