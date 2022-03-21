@@ -3,7 +3,7 @@ const mainHolder = document.getElementById("holderMain");
 const menuToggleButton = document.getElementById("navToggle");
 let sideMenuOn;
 
-if(window.innerWidth / window.innerHeight < 1){
+if(window.innerWidth / window.innerHeight < 1.04){
     disableNav();
 }
 else{
@@ -21,17 +21,17 @@ function toggleNav() {
 
 function disableNav(){
     sideMenuOn = false;
-    sideMenu.style.width = "0px";
+    sideMenu.style.display = "none";
     mainHolder.style.marginLeft = "16px";
     navToggle.style.marginLeft = "10px";
 }
 function enableNav(){
     sideMenuOn = true;
-    sideMenu.style.width = "220px";
-    if((window.innerWidth / window.innerHeight > 1)){
-        mainHolder.style.marginLeft = "234px";
+    sideMenu.style.display = "block";
+    if((window.innerWidth / window.innerHeight > 1.04)){ // Desktop
+        mainHolder.style.marginLeft = "calc((100% - 1900px) / 6 + 396px)";
     }
-    else{
+    else{ // Phone
         navToggle.style.marginLeft = "224px";
     }
 }
