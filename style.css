@@ -145,3 +145,6 @@ h4{
 #skeletonCanvas{
     margin: auto;
 }
+.numberInput{
+    width: 50px;
+}
