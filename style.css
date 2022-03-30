@@ -142,9 +142,35 @@ h4{
     border: black 4px solid;
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.65);
 }
+#visualizerHolder{
+    display: flex;
+    flex-direction: row;
+    margin-top: 55px;
+}
 #skeletonCanvas{
     margin: auto;
+    margin-left: 6%;
+    border: solid 0.35rem rgb(20, 20, 20);
+}
+#inputs{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    position: absolute;
+    right: calc(50% - 200px);
 }
 .numberInput{
-    width: 50px;
+    width: 100px;
+    height: 35px;
+    font-size: x-large;
+    font-size: 1.2rem;
+    padding: 1.5rem 0.9rem 1.45rem 0.9rem;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    position: absolute;
+    right: calc(60% - 200px);
+}
+.labelText{
+    font-size: larger;
 }

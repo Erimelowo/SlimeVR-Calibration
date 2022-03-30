@@ -1,55 +1,62 @@
 const canvas = document.getElementById("skeletonCanvas");
 const inputs = document.getElementsByClassName(".numberInput");
 
-let head = 10
-let neck = 10;
-let torso = 56;
-let chest = 30;
-let waist = 4;
-let hipsWidth = 26;
-let legs = 90;
-let knees = 50;
+// head, neck, torso, chest, waist, hips width, legs, knees
+let lengths = [10, 10, 56, 30, 4, 26, 90, 50];
+const lenghtInputs = document.getElementsByClassName("numberInput");
 
-let currentX = canvas.width/2, currentY = 50;
+let currentX, currentY;
 
 const scale = 3;
 const width = 8;
 
 updateSkeleton();
 
+for(let i = 0; i<lenghtInputs.length; i++){
+    lenghtInputs[i].value = lengths[i];
+    lenghtInputs[i].onchange = function(){
+        lengths[i] = lenghtInputs[i].value;
+        updateSkeleton();
+    }
+}
+
 function updateSkeleton(){
     if (canvas.getContext) {
         const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        currentX = canvas.width/2;
+        currentY = 50;
+
 
         // Head and spine
-        drawCircle(ctx, [currentX + head * scale, currentY], 2, 'purple');
-        drawLine(ctx, [currentX + head * scale, currentY], [currentX, currentY], 'purple', width);
+        drawCircle(ctx, [currentX + lengths[0] * scale, currentY], 2, 'purple');
+        drawLine(ctx, [currentX + lengths[0] * scale, currentY], [currentX, currentY], 'purple', width);
         drawCircle(ctx, [currentX, currentY], 2, 'purple');
-        drawLine(ctx, [currentX, currentY], [currentX, currentY + neck * scale], 'purple', width);
+        drawLine(ctx, [currentX, currentY], [currentX, currentY + lengths[1] * scale], 'purple', width);
         drawCircle(ctx, [currentX, currentY], 2, 'purple');
-        drawLine(ctx, [currentX, currentY], [currentX, currentY + chest * scale], 'purple', width);
+        drawLine(ctx, [currentX, currentY], [currentX, currentY + lengths[3] * scale], 'purple', width);
         drawCircle(ctx, [currentX, currentY], 2, 'purple');
-        drawLine(ctx, [currentX, currentY], [currentX, currentY + (torso - waist - chest) * scale], 'purple', width);
+        drawLine(ctx, [currentX, currentY], [currentX, currentY + (lengths[2] - lengths[4] - lengths[3]) * scale], 'purple', width);
         drawCircle(ctx, [currentX, currentY], 2, 'purple');
-        drawLine(ctx, [currentX, currentY], [currentX, currentY + waist * scale], 'purple', width);
+        drawLine(ctx, [currentX, currentY], [currentX, currentY + lengths[4] * scale], 'purple', width);
         drawCircle(ctx, [currentX, currentY], 2, 'purple');
 
         // Hips
-        drawLine(ctx, [currentX, currentY], [currentX + hipsWidth/2 * scale, currentY], 'purple', width);
+        drawLine(ctx, [currentX, currentY], [currentX + lengths[5]/2 * scale, currentY], 'purple', width);
         drawCircle(ctx, [currentX, currentY], 2, 'purple');
-        drawLine(ctx, [currentX - hipsWidth/2 * scale, currentY], [currentX - hipsWidth * scale, currentY], 'purple', width);
+        drawLine(ctx, [currentX - lengths[5]/2 * scale, currentY], [currentX - lengths[5] * scale, currentY], 'purple', width);
         drawCircle(ctx, [currentX, currentY], 2, 'purple');
 
         // Right leg
-        drawLine(ctx, [currentX + hipsWidth * scale, currentY], [currentX + hipsWidth * scale, currentY + (legs - knees) * scale], 'purple', width);
+        drawLine(ctx, [currentX + lengths[5] * scale, currentY], [currentX + lengths[5] * scale, currentY + (lengths[6] - lengths[7]) * scale], 'purple', width);
         drawCircle(ctx, [currentX, currentY], 2, 'purple');
-        drawLine(ctx, [currentX, currentY], [currentX, currentY + knees * scale], 'purple', width);
+        drawLine(ctx, [currentX, currentY], [currentX, currentY + lengths[7] * scale], 'purple', width);
         drawCircle(ctx, [currentX, currentY], 2, 'purple');
 
         // Left leg
-        drawLine(ctx, [currentX - hipsWidth * scale, currentY - legs * scale], [currentX - hipsWidth * scale, currentY - knees * scale], 'purple', width);
+        drawLine(ctx, [currentX - lengths[5] * scale, currentY - lengths[6] * scale], [currentX - lengths[5] * scale, currentY - lengths[7] * scale], 'purple', width);
         drawCircle(ctx, [currentX, currentY], 2, 'purple');
-        drawLine(ctx, [currentX, currentY], [currentX, currentY + knees * scale], 'purple', width);
+        drawLine(ctx, [currentX, currentY], [currentX, currentY + lengths[7] * scale], 'purple', width);
         drawCircle(ctx, [currentX, currentY], 2, 'purple');
     }
 }
