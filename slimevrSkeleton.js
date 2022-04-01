@@ -31,33 +31,33 @@ function updateSkeleton(){
         // Head and spine
         drawCircle(ctx, [currentX + lengths[0] * scale, currentY], 2, 'purple');
         drawLine(ctx, [currentX + lengths[0] * scale, currentY], [currentX, currentY], 'purple', width);
-        drawCircle(ctx, [currentX, currentY], 2, 'purple');
+        drawCircle(ctx, [currentX, currentY], 2.5, 'purple');
         drawLine(ctx, [currentX, currentY], [currentX, currentY + lengths[1] * scale], 'purple', width);
-        drawCircle(ctx, [currentX, currentY], 2, 'purple');
+        drawCircle(ctx, [currentX, currentY], 2.5, 'purple');
         drawLine(ctx, [currentX, currentY], [currentX, currentY + lengths[3] * scale], 'purple', width);
-        drawCircle(ctx, [currentX, currentY], 2, 'purple');
+        drawCircle(ctx, [currentX, currentY], 2.5, 'purple');
         drawLine(ctx, [currentX, currentY], [currentX, currentY + (lengths[2] - lengths[4] - lengths[3]) * scale], 'purple', width);
-        drawCircle(ctx, [currentX, currentY], 2, 'purple');
+        drawCircle(ctx, [currentX, currentY], 2.5, 'purple');
         drawLine(ctx, [currentX, currentY], [currentX, currentY + lengths[4] * scale], 'purple', width);
-        drawCircle(ctx, [currentX, currentY], 2, 'purple');
+        drawCircle(ctx, [currentX, currentY], 2.5, 'purple');
 
         // Hips
         drawLine(ctx, [currentX, currentY], [currentX + lengths[5]/2 * scale, currentY], 'purple', width);
-        drawCircle(ctx, [currentX, currentY], 2, 'purple');
+        drawCircle(ctx, [currentX, currentY], 2.5, 'purple');
         drawLine(ctx, [currentX - lengths[5]/2 * scale, currentY], [currentX - lengths[5] * scale, currentY], 'purple', width);
-        drawCircle(ctx, [currentX, currentY], 2, 'purple');
+        drawCircle(ctx, [currentX, currentY], 2.5, 'purple');
 
         // Right leg
         drawLine(ctx, [currentX + lengths[5] * scale, currentY], [currentX + lengths[5] * scale, currentY + (lengths[6] - lengths[7]) * scale], 'purple', width);
-        drawCircle(ctx, [currentX, currentY], 2, 'purple');
+        drawCircle(ctx, [currentX, currentY], 2.5, 'purple');
         drawLine(ctx, [currentX, currentY], [currentX, currentY + lengths[7] * scale], 'purple', width);
-        drawCircle(ctx, [currentX, currentY], 2, 'purple');
+        drawCircle(ctx, [currentX, currentY], 2.5, 'purple');
 
         // Left leg
         drawLine(ctx, [currentX - lengths[5] * scale, currentY - lengths[6] * scale], [currentX - lengths[5] * scale, currentY - lengths[7] * scale], 'purple', width);
-        drawCircle(ctx, [currentX, currentY], 2, 'purple');
+        drawCircle(ctx, [currentX, currentY], 2.5, 'purple');
         drawLine(ctx, [currentX, currentY], [currentX, currentY + lengths[7] * scale], 'purple', width);
-        drawCircle(ctx, [currentX, currentY], 2, 'purple');
+        drawCircle(ctx, [currentX, currentY], 2.5, 'purple');
     }
 }
 function drawLine(ctx, begin, end, stroke, width) {

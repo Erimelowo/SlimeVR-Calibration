@@ -123,10 +123,14 @@ h4{
 }
 .vidHolder{
     display: flex;
-    margin: 18px 18px 18px 18px;
+    margin: 30px 18px 18px 18px;
+}
+.sideDescription{
+    width: 20%;
 }
 .video{
     margin: auto;
+    margin-left: 5%;
     border: black 3px solid;
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.65);
     width: 46vw;
@@ -149,15 +153,14 @@ h4{
 }
 #skeletonCanvas{
     margin: auto;
-    margin-left: 6%;
+    margin-left: 9%;
     border: solid 0.35rem rgb(20, 20, 20);
 }
 #inputs{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 40px;
-    position: absolute;
-    right: calc(50% - 200px);
+    margin-right: calc(60% - 300px);
 }
 .numberInput{
     width: 100px;
@@ -168,9 +171,17 @@ h4{
     border-radius: 0.2rem;
     background-color: rgb(255, 255, 255);
     border: none;
-    position: absolute;
-    right: calc(60% - 200px);
+    margin-bottom: 7px;
 }
 .labelText{
     font-size: larger;
+}
+#skeletonInputs{
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (max-width:580px) {
+    #visualizerHolder   { flex-direction:column }
+    #skeletonCanvas    {margin-left: 20%;}
+    #inputs    {margin-left: 20%;}
 }
