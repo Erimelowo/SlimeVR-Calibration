@@ -1,70 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Visualizer - Cawibrwation</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div id="sideMenu">
-        <h2 id="sideTitle">SlimeVR Calibration</h2>
-        <hr id="separatorLine">
-        <div id="buttonHolder">
-            <a href="index.html" class="button">Home</a>
-            <a href="frequent-issues.html" class="button">Frequent Issues</a>
-            <a href="body-proportions.html" class="button">Body Proportions</a>
-            <a href="mounting.html" class="button">Mounting</a>
-            <a href="visualizer.html" class="button">Visualizer</a>
-            <a href="proportion-hacks.html" class="button">Proportion Hacks</a>
-        </div>
+      <h2 id="sideTitle">SlimeVR Calibration</h2>
+      <hr id="separatorLine" />
+      <div id="buttonHolder">
+        <a href="index.html" class="button">Home</a>
+        <a href="frequent-issues.html" class="button">Frequent Issues</a>
+        <a href="body-proportions.html" class="button">Body Proportions</a>
+        <a href="mounting.html" class="button">Mounting</a>
+        <a href="visualizer.html" class="button">Visualizer</a>
+        <a href="proportion-hacks.html" class="button">Proportion Hacks</a>
+      </div>
     </div>
-    
+
     <div id="holderMain">
+      <span id="navToggle" onclick="toggleNav()">&#9776;</span>
 
-        <span id="navToggle" onclick="toggleNav()">&#9776;</span>
+      <h1 id="title">Proportions Visualizer</h1>
 
-        <h1 id="title">Proportions Visualizer</h1>
+      <div id="space"></div>
 
-        <div id="space"></div>
+      <div id="visualizerHolder">
+        <canvas id="skeletonCanvas" width="250" height="670"></canvas>
 
-        <div id="visualizerHolder">
-            <canvas id="skeletonCanvas" width="250" height="670"></canvas>
+        <div id="inputs">
+          <div id="skeletonInputs">
+            <p class="labelText">Head shift</p>
+            <p class="labelText">Neck length</p>
+            <p class="labelText">Torso length</p>
+            <p class="labelText">Chest distance</p>
+            <p class="labelText">Waist distance</p>
+            <p class="labelText">Hips width</p>
+            <p class="labelText">Legs length</p>
+            <p class="labelText">Knee height</p>
+          </div>
 
-            <div id="inputs">
-                <div id="skeletonInputs">
-                    <p class="labelText">Head shift</p>
-                    <p class="labelText">Neck length</p>
-                    <p class="labelText">Torso length</p>
-                    <p class="labelText">Chest distance</p>
-                    <p class="labelText">Waist distance</p>
-                    <p class="labelText">Hips width</p>
-                    <p class="labelText">Legs length</p>
-                    <p class="labelText">Knee height</p>
-                </div>
-
-                <div id="skeletonInputs">
-                    <input type="number" class="numberInput">
-                    <input type="number" class="numberInput">
-                    <input type="number" class="numberInput">
-                    <input type="number" class="numberInput">
-                    <input type="number" class="numberInput">
-                    <input type="number" class="numberInput">
-                    <input type="number" class="numberInput">
-                    <input type="number" class="numberInput">
-                </div>
-            </div>
+          <div id="skeletonInputs">
+            <input type="number" class="numberInput" />
+            <input type="number" class="numberInput" />
+            <input type="number" class="numberInput" />
+            <input type="number" class="numberInput" />
+            <input type="number" class="numberInput" />
+            <input type="number" class="numberInput" />
+            <input type="number" class="numberInput" />
+            <input type="number" class="numberInput" />
+          </div>
         </div>
+      </div>
 
-        <script src="slimevrSkeleton.js"></script>
+      <script src="slimevrSkeleton.js"></script>
 
-        <div id="space"></div>
-
+      <div id="space"></div>
     </div>
 
     <script src="windowScaler.js"></script>
-
-</body>
+  </body>
 </html>

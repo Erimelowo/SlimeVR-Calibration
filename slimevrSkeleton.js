@@ -1,3 +1,8 @@
+/*
+ * Script to visualize SlimeVR's skeleton from the proportions
+ * the user enters into number input fields.
+ */
+
 const canvas = document.getElementById("skeletonCanvas");
 const inputs = document.getElementsByClassName(".numberInput");
 
@@ -12,23 +17,26 @@ const width = 8;
 
 updateSkeleton();
 
-for(let i = 0; i<lenghtInputs.length; i++){
+// Gets all inputs
+for (let i = 0; i < lenghtInputs.length; i++) {
+    // Applies default values to inputs
     lenghtInputs[i].value = lengths[i];
-    lenghtInputs[i].onchange = function(){
+    
+    // Updates skeleton when user changes a value
+    lenghtInputs[i].onchange = function () {
         lengths[i] = lenghtInputs[i].value;
         updateSkeleton();
     }
 }
 
-function updateSkeleton(){
+function updateSkeleton() {
     if (canvas.getContext) {
         const ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        currentX = canvas.width/2;
+        currentX = canvas.width / 2;
         currentY = 50;
 
-
-        // Head and spine
+        // Draws head and spine
         drawCircle(ctx, [currentX + lengths[0] * scale, currentY], 2, 'purple');
         drawLine(ctx, [currentX + lengths[0] * scale, currentY], [currentX, currentY], 'purple', width);
         drawCircle(ctx, [currentX, currentY], 2.5, 'purple');
@@ -41,25 +49,27 @@ function updateSkeleton(){
         drawLine(ctx, [currentX, currentY], [currentX, currentY + lengths[4] * scale], 'purple', width);
         drawCircle(ctx, [currentX, currentY], 2.5, 'purple');
 
-        // Hips
-        drawLine(ctx, [currentX, currentY], [currentX + lengths[5]/2 * scale, currentY], 'purple', width);
+        // Draws hips
+        drawLine(ctx, [currentX, currentY], [currentX + lengths[5] / 2 * scale, currentY], 'purple', width);
         drawCircle(ctx, [currentX, currentY], 2.5, 'purple');
-        drawLine(ctx, [currentX - lengths[5]/2 * scale, currentY], [currentX - lengths[5] * scale, currentY], 'purple', width);
+        drawLine(ctx, [currentX - lengths[5] / 2 * scale, currentY], [currentX - lengths[5] * scale, currentY], 'purple', width);
         drawCircle(ctx, [currentX, currentY], 2.5, 'purple');
 
-        // Right leg
+        // Draws right leg
         drawLine(ctx, [currentX + lengths[5] * scale, currentY], [currentX + lengths[5] * scale, currentY + (lengths[6] - lengths[7]) * scale], 'purple', width);
         drawCircle(ctx, [currentX, currentY], 2.5, 'purple');
         drawLine(ctx, [currentX, currentY], [currentX, currentY + lengths[7] * scale], 'purple', width);
         drawCircle(ctx, [currentX, currentY], 2.5, 'purple');
 
-        // Left leg
+        // Draws left leg
         drawLine(ctx, [currentX - lengths[5] * scale, currentY - lengths[6] * scale], [currentX - lengths[5] * scale, currentY - lengths[7] * scale], 'purple', width);
         drawCircle(ctx, [currentX, currentY], 2.5, 'purple');
         drawLine(ctx, [currentX, currentY], [currentX, currentY + lengths[7] * scale], 'purple', width);
         drawCircle(ctx, [currentX, currentY], 2.5, 'purple');
     }
 }
+
+// Draw a line on the canvas from being to end.
 function drawLine(ctx, begin, end, stroke, width) {
     if (stroke) {
         ctx.strokeStyle = stroke;
@@ -75,7 +85,9 @@ function drawLine(ctx, begin, end, stroke, width) {
     ctx.lineTo(...end);
     ctx.stroke();
 }
-function drawCircle(ctx, begin, radius, stroke) {
+
+// Draw an empty circle on the canvas at pos.
+function drawCircle(ctx, pos, radius, stroke) {
     if (stroke) {
         ctx.strokeStyle = stroke;
     }
@@ -84,6 +96,6 @@ function drawCircle(ctx, begin, radius, stroke) {
     }
     ctx.lineCap = "round";
     ctx.beginPath();
-    ctx.arc(begin[0], begin[1], radius, 0, 2 * Math.PI);
+    ctx.arc(pos[0], pos[1], radius, 0, 2 * Math.PI);
     ctx.stroke();
 }
