@@ -126,11 +126,13 @@ h4{
     margin: 30px 18px 18px 18px;
 }
 .sideDescription{
+    margin-left: 12px;
+    margin-right: 8px;
     width: 20%;
 }
 .video{
     margin: auto;
-    margin-left: 5%;
+    margin-left: 0;
     border: black 3px solid;
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.65);
     width: 46vw;
