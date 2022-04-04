@@ -29,7 +29,7 @@ function disableNav() {
 function enableNav() {
     sideMenuOnUser = true;
     sideMenu.style.display = "block";
-    if (parseInt(getBrowserSize().width) / parseInt(getBrowserSize().height) > 1.03) { // Desktop
+    if (parseInt(getBrowserSize().width) > 920) { // Desktop
         mainHolder.style.marginLeft = "calc((100% - 1900px) / 6 + 396px)";
     } else { // Phone
         navToggle.style.marginLeft = "224px";
@@ -42,7 +42,7 @@ window.onresize = function (e) {
 
 // Toggle the side menu automatically when the user resizes the window
 function resize(first) {
-    if (parseInt(getBrowserSize().width) / parseInt(getBrowserSize().height) > 1.03) { // Desktop
+    if (parseInt(getBrowserSize().width) > 920) { // Desktop
         if (sideMenuOnAuto || first) {
             sideMenuOnUser = true;
             sideMenu.style.display = "block";
