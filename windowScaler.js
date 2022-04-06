@@ -9,6 +9,8 @@ const mainHolder = document.getElementById("holderMain");
 const menuToggleButton = document.getElementById("navToggle");
 let sideMenuOnUser, sideMenuOnAuto;
 
+const desktopMinWidth = 926;
+
 resize(true);
 
 // Called when the user clicks the hamburger menu.
@@ -29,7 +31,7 @@ function disableNav() {
 function enableNav() {
     sideMenuOnUser = true;
     sideMenu.style.display = "block";
-    if (parseInt(getBrowserSize().width) > 920) { // Desktop
+    if (parseInt(getBrowserSize().width) > desktopMinWidth) { // Desktop
         mainHolder.style.marginLeft = "calc((100% - 1900px) / 6 + 396px)";
     } else { // Phone
         navToggle.style.marginLeft = "224px";
@@ -42,7 +44,7 @@ window.onresize = function (e) {
 
 // Toggle the side menu automatically when the user resizes the window
 function resize(first) {
-    if (parseInt(getBrowserSize().width) > 920) { // Desktop
+    if (parseInt(getBrowserSize().width) > desktopMinWidth) { // Desktop
         if (sideMenuOnAuto || first) {
             sideMenuOnUser = true;
             sideMenu.style.display = "block";

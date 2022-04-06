@@ -21,10 +21,15 @@
       </div>
     </div>
 
-    <div id="holderMain">
+    <div id="holderMain" class="mainLight">
       <span id="navToggle" onclick="toggleNav()">&#9776;</span>
 
+      <!-- Icon by Saepul Nahwan -->
+      <img src="resources/day-and-night.png" alt="" id="darkModeButton" class="dayIcon" onclick="toggleDarkMode()">
+
       <h1 id="title">Frequent Issues</h1>
+
+      <hr id="separatorLine"/>
 
       <p class="category">My trackers go the wrong direction</p>
       <ul>
@@ -127,5 +132,6 @@
     </div>
 
     <script src="windowScaler.js"></script>
+    <script src="darkModeHandler.js"></script>
   </body>
 </html>

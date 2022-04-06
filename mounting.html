@@ -21,10 +21,15 @@
       </div>
     </div>
 
-    <div id="holderMain">
+    <div id="holderMain" class="mainLight">
       <span id="navToggle" onclick="toggleNav()">&#9776;</span>
 
+      <!-- Icon by Saepul Nahwan -->
+      <img src="resources/day-and-night.png" alt="" id="darkModeButton" class="dayIcon" onclick="toggleDarkMode()">
+
       <h1 id="title">Mounting</h1>
+
+      <hr id="separatorLine"/>
 
       <h2 id="subtitle">--- Recommended tracker position ---</h2>
       <ul>
@@ -109,5 +114,6 @@
     </div>
 
     <script src="windowScaler.js"></script>
+    <script src="darkModeHandler.js"></script>
   </body>
 </html>

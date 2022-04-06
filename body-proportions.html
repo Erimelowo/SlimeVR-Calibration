@@ -23,11 +23,15 @@
         </div>
     </div>
 
-    <div id="holderMain">
-
+    <div id="holderMain" class="mainLight">
         <span id="navToggle" onclick="toggleNav()">&#9776;</span>
+  
+        <!-- Icon by Saepul Nahwan -->
+        <img src="resources/day-and-night.png" alt="" id="darkModeButton" class="dayIcon" onclick="toggleDarkMode()">
 
         <h1 id="title">Body Proportions</h1>
+
+        <hr id="separatorLine"/>
 
         <h2 id="subtitle">--- Autobone ---</h2>
 
@@ -41,12 +45,14 @@
 
         <h2 id="subtitle">--- Manual Calibration ---</h2>
 
-        <div class="content">
+        <div id="darkerBackground" class="contentLight">
 
             <p>Make sure you have proper mounting before doing this as it will influence your results: <a
                     href="mounting.html" class="link">mounting page</a></p>
+            <p>You can visualize your body proportions here btw: <a
+                href="visualizer.html" class="link">visualizer page</a></p>
             <p>You can use a mirror in VRChat to see your trackers’ positions. However, compare SteamVR tracker position
-                to IRL joint's position, not VRChat's joints positions.</p>
+                to IRL joint's position, not your VRChat avatar's joints positions.</p>
             <p>Make sure to adjust the values from the top-down.</p>
 
             <p class="category">Head offset (8-12)</p>
@@ -100,7 +106,7 @@
     </div>
 
     <script src="windowScaler.js"></script>
-
+    <script src="darkModeHandler.js"></script>
 </body>
 
 </html>

@@ -21,10 +21,15 @@
       </div>
     </div>
 
-    <div id="holderMain">
+    <div id="holderMain" class="mainLight">
       <span id="navToggle" onclick="toggleNav()">&#9776;</span>
 
+      <!-- Icon by Saepul Nahwan -->
+      <img src="resources/day-and-night.png" alt="" id="darkModeButton" class="dayIcon" onclick="toggleDarkMode()">
+
       <h1 id="title">Proportion Hacks</h1>
+
+      <hr id="separatorLine"/>
 
       <h3 id="subtitle">
         These "hacks" present both advantages and disadvantages. Use wisely.
@@ -43,15 +48,18 @@
         ></iframe>
       </div>
 
-      <!--
         <div id="space"></div>
 
         <h2 id="subtitle">---La Magie's hips width hack ---</h2>
-        -->
+
+        <h3 class="centerInfo">Make your hips width in the SlimeVR body proportions really small (around 5).</h3>
+        <h3 class="centerInfo">This makes tracking feel more responsive for certain people, at the cost of accuracy.</h3>
+
 
       <div id="space"></div>
     </div>
 
     <script src="windowScaler.js"></script>
+    <script src="darkModeHandler.js"></script>
   </body>
 </html>
