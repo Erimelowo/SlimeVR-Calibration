@@ -5,25 +5,25 @@
 
 const holderMain = document.getElementById("holderMain");
 const darkModeButton = document.getElementById("darkModeButton");
-const darkerBackground = document.getElementById("darkerBackground")
+const darkerBackground = document.getElementById("darkerBackground");
 
 toggleDarkMode(true);
 
 // Toggles dark mode. Called when pressing the dark mode toggle button and on page load.
-function toggleDarkMode(first = false){
-    if((localStorage.getItem("darkMode") === "on") === !first){
-        holderMain.className = "mainLight";
-        darkModeButton.className = "dayIcon";
-        if(darkerBackground != null){
-            darkerBackground.className = "contentLight";
-        }
-        localStorage.setItem("darkMode", "off");
-    } else{
-        holderMain.className = "mainDark";
-        darkModeButton.className = "nightIcon";
-        if(darkerBackground != null){
-            darkerBackground.className = "contentDark";
-        }
-        localStorage.setItem("darkMode", "on");
+function toggleDarkMode(first = false) {
+  if ((localStorage.getItem("darkMode") === "on") === !first) {
+    holderMain.className = "mainLight";
+    darkModeButton.className = "dayIcon";
+    if (darkerBackground != null) {
+      darkerBackground.className = "backgroundLight";
     }
+    localStorage.setItem("darkMode", "off");
+  } else {
+    holderMain.className = "mainDark";
+    darkModeButton.className = "nightIcon";
+    if (darkerBackground != null) {
+      darkerBackground.className = "backgroundDark";
+    }
+    localStorage.setItem("darkMode", "on");
+  }
 }
