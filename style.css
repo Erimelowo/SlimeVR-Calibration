@@ -29,7 +29,7 @@ body {
 #sideTitle {
   color: white;
   font-size: 30px;
-  margin: 25px 25px 20px 25px;
+  margin: 28px 25px 20px 25px;
   letter-spacing: 1px;
 }
 
@@ -171,9 +171,9 @@ p {
   margin: 30px 18px 18px 18px;
 }
 .sideDescription {
-  margin-left: 12px;
-  margin-right: 8px;
+  margin: 15px 10px 15px 10px;
   width: 20%;
+  font-weight: 500;
 }
 .video {
   margin: auto;
