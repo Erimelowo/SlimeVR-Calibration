@@ -39,7 +39,7 @@ body {
 }
 
 #holderMain {
-  border: 2px black solid;
+  border: 2px rgb(8, 8, 8) solid;
   margin: 16px 16px 16px calc((100% - 1900px) / 6 + 396px);
 }
 
@@ -91,7 +91,6 @@ body {
   outline: none;
   cursor: pointer;
   font-weight: 500;
-  border-radius: 3px;
   padding: 0 16px;
   margin: 8px 0px 8px 0px;
   border-radius: 4px;
@@ -137,7 +136,7 @@ p {
   margin: 15px;
 }
 .category {
-  margin: 30px 10px 10px 4%;
+  margin: 30px 10px 10px calc(3% + 10px);
   font-weight: 500;
   font-size: larger;
 }
@@ -148,11 +147,11 @@ p {
   font-size: larger;
 }
 .info {
-  margin: 0px 10px 0px 7%;
+  margin: 0px 10px 0px calc(5% + 15px);
   line-height: 1.6;
 }
 .center {
-  margin-top: 10px;
+  margin-top: 12px;
   text-align: center;
 }
 
@@ -171,15 +170,14 @@ p {
   margin: 30px 18px 18px 18px;
 }
 .sideDescription {
-  margin: 15px 10px 15px 10px;
+  margin: 15px 10px 15px 5px;
   width: 20%;
   font-weight: 500;
 }
 .video {
   margin: auto;
   margin-left: 0;
-  border: black 3px solid;
-  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.65);
+  border: black 2px solid;
   width: 46vw;
   height: 26vw;
   background-color: black;
@@ -191,8 +189,7 @@ p {
 }
 .image {
   margin: auto;
-  border: black 4px solid;
-  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.65);
+  border: black 3px solid;
 }
 
 #visualizerHolder {
