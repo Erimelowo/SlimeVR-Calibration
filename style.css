@@ -154,6 +154,9 @@ p {
   margin-top: 12px;
   text-align: center;
 }
+.spaceElement {
+  margin: 24px;
+}
 
 #links {
   display: flex;
