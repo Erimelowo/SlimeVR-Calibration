@@ -11,19 +11,19 @@ toggleDarkMode(true);
 
 // Toggles dark mode. Called when pressing the dark mode toggle button and on page load.
 function toggleDarkMode(first = false) {
-  if ((localStorage.getItem("darkMode") === "on") === !first) {
-    holderMain.className = "mainLight";
-    darkModeButton.className = "dayIcon";
-    if (darkerBackground != null) {
-      darkerBackground.className = "backgroundLight";
-    }
-    localStorage.setItem("darkMode", "off");
-  } else {
+  if ((localStorage.getItem("lightMode") === "on") !== first) {
     holderMain.className = "mainDark";
     darkModeButton.className = "nightIcon";
     if (darkerBackground != null) {
       darkerBackground.className = "backgroundDark";
     }
-    localStorage.setItem("darkMode", "on");
+    localStorage.setItem("lightMode", "off");
+  } else {
+    holderMain.className = "mainLight";
+    darkModeButton.className = "dayIcon";
+    if (darkerBackground != null) {
+      darkerBackground.className = "backgroundLight";
+    }
+    localStorage.setItem("lightMode", "on");
   }
 }
