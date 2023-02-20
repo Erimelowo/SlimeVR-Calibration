@@ -116,8 +116,10 @@ function updateSkeleton() {
     drawCircle(ctx, [currentX, currentY], 2.5, "purple");
 
     // Draws left leg
-    currentY -= lengths[6] * scale;
-    currentY -= lengths[7] * scale;
+    console.log(lengths[6] + "  " + lengths[7] + "  " + scale);
+    console.log(currentY);
+    currentY -= (lengths[6] + lengths[7]) * scale;
+    console.log(currentY);
     drawLine(
       ctx,
       [currentX - lengths[5] * scale, currentY],
