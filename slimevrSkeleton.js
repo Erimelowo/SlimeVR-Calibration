@@ -6,8 +6,8 @@
 const canvas = document.getElementById("skeletonCanvas");
 const inputs = document.getElementsByClassName(".numberInput");
 
-// head, neck, chest, waist, hip, hips width, upper leg, lower leg
-let lengths = [10, 10, 32, 20, 4, 26, 42, 50];
+// head, neck, upperChest, chest, waist, hip, hips width, upper leg, lower leg
+let lengths = [10, 10, 16, 16, 20, 4, 26, 42, 50];
 const lenghtInputs = document.getElementsByClassName("numberInput");
 
 let currentX, currentY;
@@ -78,20 +78,28 @@ function updateSkeleton() {
       width
     );
     drawCircle(ctx, [currentX, currentY], 2.5, "purple");
+    drawLine(
+      ctx,
+      [currentX, currentY],
+      [currentX, currentY + lengths[5] * scale],
+      "purple",
+      width
+    );
+    drawCircle(ctx, [currentX, currentY], 2.5, "purple");
 
     // Draws hips
     drawLine(
       ctx,
       [currentX, currentY],
-      [currentX + (lengths[5] / 2) * scale, currentY],
+      [currentX + (lengths[6] / 2) * scale, currentY],
       "purple",
       width
     );
     drawCircle(ctx, [currentX, currentY], 2.5, "purple");
     drawLine(
       ctx,
-      [currentX - (lengths[5] / 2) * scale, currentY],
-      [currentX - lengths[5] * scale, currentY],
+      [currentX - (lengths[6] / 2) * scale, currentY],
+      [currentX - lengths[6] * scale, currentY],
       "purple",
       width
     );
@@ -100,8 +108,8 @@ function updateSkeleton() {
     // Draws right leg
     drawLine(
       ctx,
-      [currentX + lengths[5] * scale, currentY],
-      [currentX + lengths[5] * scale, currentY + lengths[6] * scale],
+      [currentX + lengths[6] * scale, currentY],
+      [currentX + lengths[6] * scale, currentY + lengths[7] * scale],
       "purple",
       width
     );
@@ -109,21 +117,18 @@ function updateSkeleton() {
     drawLine(
       ctx,
       [currentX, currentY],
-      [currentX, currentY + lengths[7] * scale],
+      [currentX, currentY + lengths[8] * scale],
       "purple",
       width
     );
     drawCircle(ctx, [currentX, currentY], 2.5, "purple");
 
     // Draws left leg
-    console.log(lengths[6] + "  " + lengths[7] + "  " + scale);
-    console.log(currentY);
-    currentY -= (lengths[6] + lengths[7]) * scale;
-    console.log(currentY);
+    currentY -= (+lengths[7] + +lengths[8]) * scale;
     drawLine(
       ctx,
-      [currentX - lengths[5] * scale, currentY],
-      [currentX - lengths[5] * scale, currentY + lengths[6] * scale],
+      [currentX - lengths[6] * scale, currentY],
+      [currentX - lengths[6] * scale, currentY + lengths[7] * scale],
       "purple",
       width
     );
@@ -131,7 +136,7 @@ function updateSkeleton() {
     drawLine(
       ctx,
       [currentX, currentY],
-      [currentX, currentY + lengths[7] * scale],
+      [currentX, currentY + lengths[8] * scale],
       "purple",
       width
     );
